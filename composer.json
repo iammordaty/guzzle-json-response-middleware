@@ -1,0 +1,24 @@
+{
+    "name": "iammordaty/guzzle-json-response-middleware",
+    "description": "Simple Guzzle 6.x JSON response middleware",
+    "keywords": [ "guzzle", "middleware", "psr-7", "response", "json", "stream" ],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "iammordaty",
+            "email": "iammordaty@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "ext-json": "*",
+        "guzzlehttp/promises": "^1.0",
+        "guzzlehttp/psr7": "^1.6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "GuzzleJsonResponseMiddleware\\": "src"
+        }
+    }
+}
