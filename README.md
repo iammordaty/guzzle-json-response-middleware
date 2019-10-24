@@ -24,8 +24,28 @@ $stack->push(new JsonResponseMiddleware(), JsonResponseMiddleware::NAME);
 
 $client = new Client([ 'handler' => $stack ]);
 
-$response = $client->get(/* */);
-$contents = $response->getBody()->getJson();
+$response = $client->get('http://www.mocky.io/v2/5db0b9312f00002901c13d8e');
+
+// please note that the `getJson` method, excluding for the first one, accepts the same arguments
+// as native PHP's `json_decode` function
+$contents = $response->getBody()->getJson(true);
+
+print_r($contents);
+
+/*
+Outputs:
+
+Array
+(
+    [id] => 78349
+    [name] => John Smith
+    [username] => @smith
+    [email] => hello@smith.com
+    [phone] => +1-202-555-0192
+    [website] => smith.dev
+)
+*/
+
 ```
 
 ## License

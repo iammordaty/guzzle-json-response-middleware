@@ -10,9 +10,10 @@ class JsonStream implements StreamInterface
     use StreamDecoratorTrait;
 
     /**
-     * Returns decoded body contents
+     * Returns decoded body contents. Except for the first one,
+     * accepts the same arguments as PHP's json_decode function.
      *
-     * @see json_decode()
+     * @see json_decode() Parameters documentation
      * @link https://php.net/manual/en/function.json-decode.php
      *
      * @param bool $assoc
